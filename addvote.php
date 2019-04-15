@@ -13,7 +13,7 @@ if($numeros < 2){
       $send_result['codigo'] = "02"; 
 } else {
   $origen = implode(",", $_POST['origen']);
-  $sql = "INSERT INTO votos (nombre, alias, rut, email, idcandidato, origen) VALUE ('$_POST[nombre]', '$_POST[alias]', '$_POST[rut]', '$_POST[email]', '$_POST[selec_candidato]', '$origen')";
+  $sql = "INSERT INTO votos (nombre, alias, rut, email, idregion, idcandidato, origen) VALUE ('$_POST[nombre]', '$_POST[alias]', '$_POST[rut]', '$_POST[email]', '$_POST[selec_region]', '$_POST[selec_candidato]', '$origen')";
   $result = mysql_query($sql, $con);
  
    if ($result) {

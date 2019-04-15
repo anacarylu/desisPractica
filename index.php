@@ -1,5 +1,6 @@
 <?php
   include("get_candidato.php");
+  include("get_region.php");
   ?>
 
 
@@ -32,6 +33,17 @@
       <div>
         <label>Email</label>
         <input type="text" name="email">
+      </div>
+      <div>
+          <label>Region</label>
+          <select name="selec_region" id="selec_region">
+              <option value="">Seleccione region</option>                 
+              <?php 
+                  while($reg=mysql_fetch_array($region)){
+                      echo "<option value=".$reg['ID'].">".$reg['region']."</option>";
+                  }                           
+              ?>  
+      </select>
       </div>
       <div>
           <label>Candidatos</label>
